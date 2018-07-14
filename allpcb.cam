@@ -1,0 +1,198 @@
+{
+    "author": {
+        "email": "anselm.busse@outlook.com",
+        "name": "Anselm Busse"
+    },
+    "description": {
+        "EN": "CAM job description goes here."
+    },
+    "output_type": "zip",
+    "outputs": [
+        {
+            "format_specifier": {
+                "decimal": 3,
+                "integer": 3
+            },
+            "output_type": "drill",
+            "outputs": [
+                {
+                    "drills": {
+                        "NPTH": true,
+                        "PTH": true,
+                        "VIA": true
+                    },
+                    "filename_format": "%N.drd",
+                    "layers": {
+                        "from": 1,
+                        "to": 16
+                    },
+                    "name": "Excellon 1 - 16",
+                    "type": "excellon"
+                }
+            ]
+        },
+        {
+            "filename_prefix": "outputs",
+            "format_specifier": {
+                "decimal": 4,
+                "integer": 3
+            },
+            "generate_job_file": true,
+            "output_type": "gerber",
+            "outputs": [
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 1,
+                        "layer_details": "mixed",
+                        "layer_type": "top"
+                    },
+                    "filename_format": "%N.cmp",
+                    "layers": [
+                        1,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "Bestückungsseite",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 16,
+                        "layer_details": "mixed",
+                        "layer_type": "Bottom"
+                    },
+                    "filename_format": "%N.sol",
+                    "layers": [
+                        16,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "Lötseite",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Bestückungsdruck",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.plc",
+                    "layers": [
+                        112
+                    ],
+                    "milling": false,
+                    "name": "Bestückungsdruck",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Soldermask",
+                        "layer_type": "top",
+                        "layers": [
+                            29
+                        ],
+                        "polarity": "negative"
+                    },
+                    "filename_format": "%N.stc",
+                    "layers": [
+                        29
+                    ],
+                    "milling": false,
+                    "name": "Lötstopmaske Bestückungsseite",
+                    "polarity": "negative",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Soldermask",
+                        "layer_type": "Bottom",
+                        "layers": [
+                            30
+                        ],
+                        "polarity": "negative"
+                    },
+                    "filename_format": "%N.sts",
+                    "layers": [
+                        30
+                    ],
+                    "milling": false,
+                    "name": "Lötstopmaske Lötseite",
+                    "polarity": "negative",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": true,
+                    "config": {
+                        "file_function": "Profile",
+                        "plating": "non-plated"
+                    },
+                    "filename_format": "%N.gbr",
+                    "layers": [
+                    ],
+                    "milling": false,
+                    "name": "",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                }
+            ],
+            "version": "RS274X"
+        }
+    ],
+    "timestamp": "2018-07-19T21:21:05",
+    "type": "EAGLE CAM job",
+    "units": "metric",
+    "version": "8.6.1"
+}
